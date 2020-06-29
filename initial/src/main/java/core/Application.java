@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.config.ScheduledTask;
@@ -25,7 +26,7 @@ import database.DatabaseGrabber;
 @SpringBootApplication
 @EnableScheduling
 @ConditionalOnProperty(name = "spring.enable.scheduling")
-public class Application {
+public class Application extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		
